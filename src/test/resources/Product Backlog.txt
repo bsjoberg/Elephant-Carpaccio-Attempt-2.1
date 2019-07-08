@@ -1,0 +1,18 @@
+Vision:
+
+Goal(s):
+
+Backlog:
+- Hello World
+- Get input from the user
+- Display order value - 2 inputs, 1 output, no discounts
+Hard-coded state tax - Utah state tax used automatically
+- Manual tax - 3 inputs (number of items, price per item, sales tax)
+- Output is order value
+- UTAH ID
+- Two states supported - all others give error message
+- Add other 3 states
+- One discount
+- Two discounts
+All discounts
+Initial user interface
