@@ -41,6 +41,14 @@ public class RetailOrder {
 		RetailOrder retailOrder = new RetailOrder();
 
 		System.out.println("Welcome to our fabulous retail ordering calculator");
+		BufferedReader br = enterNumberOfItems(retailOrder);
+
+		enterPrice(retailOrder, br);
+
+		enterStateCode(retailOrder, br);
+	}
+
+	private static BufferedReader enterNumberOfItems(RetailOrder retailOrder) {
 		System.out.println("Enter the number of items: ");
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		try {
@@ -48,14 +56,19 @@ public class RetailOrder {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		return br;
+	}
 
+	private static void enterPrice(RetailOrder retailOrder, BufferedReader br) {
 		System.out.println("Enter the price of the item: ");
 		try {
 			retailOrder.setPrice(Double.valueOf(br.readLine()));
 		} catch (IOException ioe) {
 			ioe.printStackTrace();
 		}
+	}
 
+	private static void enterStateCode(RetailOrder retailOrder, BufferedReader br) {
 		System.out.println("Enter the state code: ");
 		try {
 			retailOrder.setTaxRate(TaxRate.getRateFor(br.readLine()));
